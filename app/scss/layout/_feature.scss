@@ -1,0 +1,112 @@
+.features-color {    
+    background-color: $LightGrayishBlue;
+
+    .features {
+        text-align: center;
+        padding-bottom: 4.375rem;
+        padding-top: 4.375rem;
+    
+        @include breakPoint-up(large) {
+            padding-bottom: 6.875rem;
+            padding-top: 7.06rem;
+            text-align: left;
+        }
+    
+        .faeture-info  {
+            padding-bottom: 3.875rem;        
+            padding-left: 2.2rem;
+            padding-right: 2.2rem;
+    
+            @include breakPoint-up(large) {
+                padding-bottom: 5rem;
+                padding-left: 0;
+                padding-right: 0;
+            }
+    
+            h2 {
+                font-size: 1.875rem;
+                font-weight: 400;
+                color: $DarkBlue;
+                margin-bottom: 1.5625rem;
+    
+                @include breakPoint-up(large) {
+                    font-size: 2.3125rem;
+                }
+            }
+    
+            p {
+                font-size: $font-sm;
+                font-weight: 400;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 1.5rem;
+    
+                @include breakPoint-up(large) {
+                    font-size: $font-med;
+                    width: 38.5rem;
+                }
+            }
+        }
+    
+        .feature-list {
+    
+            @include breakPoint-up(medium) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+    
+            @include breakPoint-up(large) {
+                display: flex;
+                justify-content: space-between;
+                padding-left: 0;
+                padding-right: 0;
+            }
+    
+            .feature-item {
+                @include breakPoint-up(medium) {
+                    width: 16.4rem;
+                }
+    
+                @include breakPoint-up(large) {
+                    width: 16.4rem;
+                }
+    
+                &:not(:last-child) {
+                    p {
+                        padding-bottom: 2.5rem;
+    
+                        @include breakPoint-up(large) {
+                            padding-bottom: 0;
+                        }
+                    }                
+                }
+    
+                .icon-img {
+                    margin-bottom: 2rem;
+                }
+    
+                h4 {
+                    font-size: $font-med;
+                    color: $DarkBlue;
+                    font-weight: 300;
+    
+                    @include breakPoint-up (large) {
+                        font-size: $font-lg;
+                    }
+                }
+    
+                p {
+                    font-size: $font-sm;
+                    margin-bottom: 0;
+                    line-height: 1.5rem;
+    
+                    @include breakPoint-up(large) {
+                        font-size: $font-med;
+                    }
+                }
+            }
+        }
+    }
+}
+

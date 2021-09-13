@@ -1,0 +1,132 @@
+footer {
+    background-color: $DarkBlue;
+    color: $White;
+
+    .footer-content {
+        padding-top: 2.5rem;
+        padding-bottom: 2.8125rem;
+        display: grid;
+        grid-template-areas: "logo"
+                             "icons"
+                             "menu"
+                             "button"
+                             "cyrght";
+        justify-items: center;
+
+        @include breakPoint-up(medium) {
+            grid-template-areas: "logo  menu button"
+                                 "icons menu cyrght";
+            grid-template-rows: 3.5rem 3.5rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            align-items: center;
+            justify-items: self-start;
+            height: 11.875rem;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+
+        @include breakPoint-up(large) {
+            grid-template-areas: "logo  menu space button"
+                                 "icons menu space cyrght";
+            grid-template-rows: 3.5rem 3.5rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            justify-items: self-start;
+            height: 11.875rem;
+        }
+
+        #logo {
+            grid-area: logo;
+            
+            
+
+            img {
+                width: 8.75rem;
+                height: 1.375rem;
+            }
+        }
+
+        #icon-holder {
+            grid-area: icons; 
+            padding-top: 1.875rem;
+            padding-bottom: 1.875rem;
+            
+            @include breakPoint-up(large) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            a {
+                img {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
+            }            
+        }
+
+        #menu {
+            grid-area: menu;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 11.6875rem;
+
+            @include breakPoint-up(medium) {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+
+            @include breakPoint-up(large) {
+                display: grid;
+                width: 100%;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+
+            a {
+                text-align: center;
+                color: $White;
+                height: 2.215rem;
+                width: 100%;
+                padding-top: 0.5rem;
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    color: $LimeGreen;
+                }
+            }
+        }
+
+        #btn {
+            grid-area: button;
+            margin-top: 1.875rem;
+            margin-bottom: 1.875rem;
+
+            @include breakPoint-up(medium) {
+                justify-self: right;
+            }
+
+            @include breakPoint-up(large) {
+                justify-self: right;
+            }
+        }
+
+        #C {
+            grid-area: cyrght;
+
+            @include breakPoint-up(medium) {
+                justify-self: right;
+            }
+
+            @include breakPoint-up(large) {
+                justify-self: right;
+            }
+        }
+    }
+}
